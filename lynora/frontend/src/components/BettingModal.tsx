@@ -33,7 +33,8 @@ export default function BettingModal({ marketId, option, onClose }: BettingModal
     try {
       console.log('Placing bet:', { marketId, option, amount })
       
-      const result = await placeBet(marketId, option, amount)
+      // Place bet (may include coins parameter if Bearby wallet supports it)
+      await placeBet(marketId, option, amount)
       
       alert(`Bet placed successfully!`)
       onClose()
@@ -89,6 +90,7 @@ export default function BettingModal({ marketId, option, onClose }: BettingModal
             <p className="text-sm text-gray-400 mt-2">
               If you win, you'll receive 2x your bet (max 10 MAS)
             </p>
+           
           </div>
 
           <div className="mb-6 p-4 bg-purple-900 bg-opacity-30 border border-purple-700 rounded-lg">

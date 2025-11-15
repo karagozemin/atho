@@ -7,14 +7,13 @@
  (type $5 (func (param i32 i32 i32) (result i32)))
  (type $6 (func (result i64)))
  (type $7 (func (param i64) (result i32)))
- (type $8 (func (param i64 i32 i32) (result i32)))
+ (type $8 (func (param i64 i32) (result i32)))
  (type $9 (func (param i32 i32 i32 i32)))
  (type $10 (func (param i32 i32 i32 i32) (result i32)))
  (type $11 (func (param i64 i32 i32 i32 i64) (result i32)))
  (type $12 (func (param i32 i32 i32)))
- (type $13 (func (param i64 i32 i32 i64) (result i32)))
- (type $14 (func (param i32 i64)))
- (type $15 (func))
+ (type $13 (func (param i32 i64)))
+ (type $14 (func))
  (import "env" "abort" (func $~lib/builtins/abort (param i32 i32 i32 i32)))
  (import "massa" "assembly_script_get_call_stack" (func $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.callStack (result i32)))
  (import "massa" "assembly_script_has_data" (func $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.has (param i32) (result i32)))
@@ -96,68 +95,71 @@
  (data $32 (i32.const 4620) "|")
  (data $32.1 (i32.const 4632) "\02\00\00\00l\00\00\00c\00a\00n\00\'\00t\00 \00d\00e\00s\00e\00r\00i\00a\00l\00i\00z\00e\00 \00u\008\00 \00f\00r\00o\00m\00 \00g\00i\00v\00e\00n\00 \00a\00r\00g\00u\00m\00e\00n\00t\00:\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e")
  (data $33 (i32.const 4748) "\\")
- (data $33.1 (i32.const 4760) "\02\00\00\00B\00\00\00B\00e\00t\00 \00a\00m\00o\00u\00n\00t\00 \00m\00u\00s\00t\00 \00b\00e\00 \00g\00r\00e\00a\00t\00e\00r\00 \00t\00h\00a\00n\00 \000")
- (data $34 (i32.const 4844) "<")
- (data $34.1 (i32.const 4856) "\02\00\00\00 \00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00m\00a\00i\00n\00.\00t\00s")
- (data $35 (i32.const 4908) "\8c")
- (data $35.1 (i32.const 4920) "\02\00\00\00n\00\00\00c\00a\00n\00\'\00t\00 \00d\00e\00s\00e\00r\00i\00a\00l\00i\00z\00e\00 \00i\003\002\00 \00f\00r\00o\00m\00 \00g\00i\00v\00e\00n\00 \00a\00r\00g\00u\00m\00e\00n\00t\00:\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e")
- (data $36 (i32.const 5052) "<")
- (data $36.1 (i32.const 5064) "\02\00\00\00 \00\00\00M\00a\00r\00k\00e\00t\00 \00n\00o\00t\00 \00f\00o\00u\00n\00d")
- (data $37 (i32.const 5116) "<")
- (data $37.1 (i32.const 5128) "\02\00\00\00(\00\00\00M\00a\00r\00k\00e\00t\00 \00i\00s\00 \00n\00o\00t\00 \00a\00c\00t\00i\00v\00e")
- (data $38 (i32.const 5180) "<")
- (data $38.1 (i32.const 5192) "\02\00\00\00 \00\00\00M\00a\00r\00k\00e\00t\00 \00h\00a\00s\00 \00e\00n\00d\00e\00d")
- (data $39 (i32.const 5244) "\1c")
- (data $39.1 (i32.const 5256) "\02\00\00\00\02\00\00\00_")
- (data $40 (i32.const 5276) "\1c")
- (data $40.1 (i32.const 5288) "\02\00\00\00\04\00\00\00U\00P")
- (data $41 (i32.const 5308) "\1c")
- (data $41.1 (i32.const 5320) "\02\00\00\00\08\00\00\00D\00O\00W\00N")
- (data $42 (i32.const 5340) ",")
- (data $42.1 (i32.const 5352) "\02\00\00\00\0e\00\00\00O\00p\00t\00i\00o\00n\00 ")
- (data $43 (i32.const 5388) ",")
- (data $43.1 (i32.const 5400) "\02\00\00\00\18\00\00\00B\00e\00t\00 \00p\00l\00a\00c\00e\00d\00:\00 ")
- (data $44 (i32.const 5436) "\1c")
- (data $44.1 (i32.const 5448) "\02\00\00\00\n\00\00\00 \00b\00e\00t\00 ")
- (data $45 (i32.const 5468) "\1c")
- (data $45.1 (i32.const 5480) "\02\00\00\00\08\00\00\00 \00o\00n\00 ")
- (data $46 (i32.const 5500) ",")
- (data $46.1 (i32.const 5512) "\02\00\00\00\12\00\00\00 \00(\00i\00n\00d\00e\00x\00:\00 ")
- (data $47 (i32.const 5548) ",")
- (data $47.1 (i32.const 5560) "\02\00\00\00\1a\00\00\00)\00 \00f\00o\00r\00 \00m\00a\00r\00k\00e\00t\00 ")
- (data $48 (i32.const 5596) "<\00\00\00\03\00\00\00\00\00\00\00\16\00\00\00(\00\00\00 \15\00\00\00\00\00\00P\15\00\00\00\00\00\00p\15\00\00\00\00\00\00\90\15\00\00\00\00\00\00\c0\15")
- (data $49 (i32.const 5660) "\\")
- (data $49.1 (i32.const 5672) "\02\00\00\00>\00\00\00O\00n\00l\00y\00 \00c\00r\00e\00a\00t\00o\00r\00 \00c\00a\00n\00 \00r\00e\00s\00o\00l\00v\00e\00 \00m\00a\00r\00k\00e\00t")
- (data $50 (i32.const 5756) "L")
- (data $50.1 (i32.const 5768) "\02\00\00\00.\00\00\00M\00a\00r\00k\00e\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00r\00e\00s\00o\00l\00v\00e\00d")
- (data $51 (i32.const 5836) "L")
- (data $51.1 (i32.const 5848) "\02\00\00\000\00\00\00M\00a\00r\00k\00e\00t\00 \00h\00a\00s\00 \00n\00o\00t\00 \00e\00n\00d\00e\00d\00 \00y\00e\00t")
- (data $52 (i32.const 5916) "<")
- (data $52.1 (i32.const 5928) "\02\00\00\00\"\00\00\00M\00a\00r\00k\00e\00t\00 \00r\00e\00s\00o\00l\00v\00e\00d\00:\00 ")
- (data $53 (i32.const 5980) ",")
- (data $53.1 (i32.const 5992) "\02\00\00\00\16\00\00\00 \00-\00 \00W\00i\00n\00n\00e\00r\00:\00 ")
- (data $54 (i32.const 6028) ",")
- (data $54.1 (i32.const 6040) "\02\00\00\00\12\00\00\00,\00 \00P\00r\00i\00c\00e\00:\00 ")
- (data $55 (i32.const 6076) ",\00\00\00\03\00\00\00\00\00\00\00\16\00\00\00\18\00\00\000\17\00\00\00\00\00\00p\17\00\00\00\00\00\00\a0\17")
- (data $56 (i32.const 6124) "L")
- (data $56.1 (i32.const 6136) "\02\00\00\004\00\00\00M\00a\00r\00k\00e\00t\00 \00i\00s\00 \00n\00o\00t\00 \00r\00e\00s\00o\00l\00v\00e\00d\00 \00y\00e\00t")
- (data $57 (i32.const 6204) "L")
- (data $57.1 (i32.const 6216) "\02\00\00\004\00\00\00N\00o\00 \00b\00e\00t\00 \00f\00o\00u\00n\00d\00 \00f\00o\00r\00 \00t\00h\00i\00s\00 \00u\00s\00e\00r")
- (data $58 (i32.const 6284) "<")
- (data $58.1 (i32.const 6296) "\02\00\00\00,\00\00\00R\00e\00w\00a\00r\00d\00 \00a\00l\00r\00e\00a\00d\00y\00 \00c\00l\00a\00i\00m\00e\00d")
- (data $59 (i32.const 6348) "L")
- (data $59.1 (i32.const 6360) "\02\00\00\008\00\00\00U\00s\00e\00r\00 \00d\00i\00d\00 \00n\00o\00t\00 \00w\00i\00n\00 \00t\00h\00i\00s\00 \00m\00a\00r\00k\00e\00t")
- (data $60 (i32.const 6428) "<")
- (data $60.1 (i32.const 6440) "\02\00\00\00\1e\00\00\00N\00o\00 \00w\00i\00n\00n\00i\00n\00g\00 \00p\00o\00o\00l")
- (data $61 (i32.const 6492) "<")
- (data $61.1 (i32.const 6504) "\02\00\00\00 \00\00\00R\00e\00w\00a\00r\00d\00 \00c\00l\00a\00i\00m\00e\00d\00:\00 ")
- (data $62 (i32.const 6556) ",")
- (data $62.1 (i32.const 6568) "\02\00\00\00\14\00\00\00 \00r\00e\00c\00e\00i\00v\00e\00d\00 ")
- (data $63 (i32.const 6604) ",")
- (data $63.1 (i32.const 6616) "\02\00\00\00\1a\00\00\00 \00f\00r\00o\00m\00 \00m\00a\00r\00k\00e\00t\00 ")
- (data $64 (i32.const 6652) ",\00\00\00\03\00\00\00\00\00\00\00\16\00\00\00\18\00\00\00p\19\00\00\00\00\00\00\b0\19\00\00\00\00\00\00\e0\19")
- (data $65 (i32.const 6700) ",")
- (data $65.1 (i32.const 6712) "\02\00\00\00\1a\00\00\00B\00e\00t\00 \00n\00o\00t\00 \00f\00o\00u\00n\00d")
+ (data $33.1 (i32.const 4760) "\02\00\00\00>\00\00\00D\00E\00B\00U\00G\00:\00 \00p\00l\00a\00c\00e\00B\00e\00t\00 \00c\00a\00l\00l\00e\00d\00 \00-\00 \00u\00s\00e\00r\00:\00 ")
+ (data $34 (i32.const 4844) ",")
+ (data $34.1 (i32.const 4856) "\02\00\00\00\18\00\00\00,\00 \00m\00a\00r\00k\00e\00t\00I\00d\00:\00 ")
+ (data $35 (i32.const 4892) "<")
+ (data $35.1 (i32.const 4904) "\02\00\00\00\1e\00\00\00,\00 \00o\00p\00t\00i\00o\00n\00I\00n\00d\00e\00x\00:\00 ")
+ (data $36 (i32.const 4956) "<")
+ (data $36.1 (i32.const 4968) "\02\00\00\00$\00\00\00,\00 \00e\00x\00p\00e\00c\00t\00e\00d\00A\00m\00o\00u\00n\00t\00:\00 ")
+ (data $37 (i32.const 5020) "<")
+ (data $37.1 (i32.const 5032) "\02\00\00\00(\00\00\00,\00 \00t\00r\00a\00n\00s\00f\00e\00r\00r\00e\00d\00C\00o\00i\00n\00s\00:\00 ")
+ (data $38 (i32.const 5084) "<\00\00\00\03\00\00\00\00\00\00\00\14\00\00\00(\00\00\00\a0\12\00\00\00\00\00\00\00\13\00\00\00\00\00\000\13\00\00\00\00\00\00p\13\00\00\00\00\00\00\b0\13")
+ (data $39 (i32.const 5148) "\1c")
+ (data $39.1 (i32.const 5160) "\02\00\00\00\04\00\00\00U\00P")
+ (data $40 (i32.const 5180) "\1c")
+ (data $40.1 (i32.const 5192) "\02\00\00\00\08\00\00\00D\00O\00W\00N")
+ (data $41 (i32.const 5212) ",")
+ (data $41.1 (i32.const 5224) "\02\00\00\00\0e\00\00\00O\00p\00t\00i\00o\00n\00 ")
+ (data $42 (i32.const 5260) ",")
+ (data $42.1 (i32.const 5272) "\02\00\00\00\18\00\00\00B\00e\00t\00 \00p\00l\00a\00c\00e\00d\00:\00 ")
+ (data $43 (i32.const 5308) "\1c")
+ (data $43.1 (i32.const 5320) "\02\00\00\00\n\00\00\00 \00b\00e\00t\00 ")
+ (data $44 (i32.const 5340) "\1c")
+ (data $44.1 (i32.const 5352) "\02\00\00\00\08\00\00\00 \00o\00n\00 ")
+ (data $45 (i32.const 5372) ",")
+ (data $45.1 (i32.const 5384) "\02\00\00\00\18\00\00\00 \00f\00o\00r\00 \00m\00a\00r\00k\00e\00t\00 ")
+ (data $46 (i32.const 5420) "<\00\00\00\03\00\00\00\00\00\00\00\14\00\00\00 \00\00\00\a0\14\00\00\00\00\00\00\d0\14\00\00\00\00\00\00\f0\14\00\00\00\00\00\00\10\15")
+ (data $47 (i32.const 5484) "\8c")
+ (data $47.1 (i32.const 5496) "\02\00\00\00n\00\00\00c\00a\00n\00\'\00t\00 \00d\00e\00s\00e\00r\00i\00a\00l\00i\00z\00e\00 \00i\003\002\00 \00f\00r\00o\00m\00 \00g\00i\00v\00e\00n\00 \00a\00r\00g\00u\00m\00e\00n\00t\00:\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e")
+ (data $48 (i32.const 5628) "<")
+ (data $48.1 (i32.const 5640) "\02\00\00\00 \00\00\00M\00a\00r\00k\00e\00t\00 \00n\00o\00t\00 \00f\00o\00u\00n\00d")
+ (data $49 (i32.const 5692) "<")
+ (data $49.1 (i32.const 5704) "\02\00\00\00 \00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00m\00a\00i\00n\00.\00t\00s")
+ (data $50 (i32.const 5756) "\\")
+ (data $50.1 (i32.const 5768) "\02\00\00\00>\00\00\00O\00n\00l\00y\00 \00c\00r\00e\00a\00t\00o\00r\00 \00c\00a\00n\00 \00r\00e\00s\00o\00l\00v\00e\00 \00m\00a\00r\00k\00e\00t")
+ (data $51 (i32.const 5852) "L")
+ (data $51.1 (i32.const 5864) "\02\00\00\00.\00\00\00M\00a\00r\00k\00e\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00r\00e\00s\00o\00l\00v\00e\00d")
+ (data $52 (i32.const 5932) "L")
+ (data $52.1 (i32.const 5944) "\02\00\00\000\00\00\00M\00a\00r\00k\00e\00t\00 \00h\00a\00s\00 \00n\00o\00t\00 \00e\00n\00d\00e\00d\00 \00y\00e\00t")
+ (data $53 (i32.const 6012) "<")
+ (data $53.1 (i32.const 6024) "\02\00\00\00\"\00\00\00M\00a\00r\00k\00e\00t\00 \00r\00e\00s\00o\00l\00v\00e\00d\00:\00 ")
+ (data $54 (i32.const 6076) ",")
+ (data $54.1 (i32.const 6088) "\02\00\00\00\16\00\00\00 \00-\00 \00W\00i\00n\00n\00e\00r\00:\00 ")
+ (data $55 (i32.const 6124) ",")
+ (data $55.1 (i32.const 6136) "\02\00\00\00\12\00\00\00,\00 \00P\00r\00i\00c\00e\00:\00 ")
+ (data $56 (i32.const 6172) ",\00\00\00\03\00\00\00\00\00\00\00\14\00\00\00\18\00\00\00\90\17\00\00\00\00\00\00\d0\17\00\00\00\00\00\00\00\18")
+ (data $57 (i32.const 6220) "L")
+ (data $57.1 (i32.const 6232) "\02\00\00\004\00\00\00M\00a\00r\00k\00e\00t\00 \00i\00s\00 \00n\00o\00t\00 \00r\00e\00s\00o\00l\00v\00e\00d\00 \00y\00e\00t")
+ (data $58 (i32.const 6300) "\1c")
+ (data $58.1 (i32.const 6312) "\02\00\00\00\02\00\00\00_")
+ (data $59 (i32.const 6332) "L")
+ (data $59.1 (i32.const 6344) "\02\00\00\004\00\00\00N\00o\00 \00b\00e\00t\00 \00f\00o\00u\00n\00d\00 \00f\00o\00r\00 \00t\00h\00i\00s\00 \00u\00s\00e\00r")
+ (data $60 (i32.const 6412) "<")
+ (data $60.1 (i32.const 6424) "\02\00\00\00,\00\00\00R\00e\00w\00a\00r\00d\00 \00a\00l\00r\00e\00a\00d\00y\00 \00c\00l\00a\00i\00m\00e\00d")
+ (data $61 (i32.const 6476) "L")
+ (data $61.1 (i32.const 6488) "\02\00\00\008\00\00\00U\00s\00e\00r\00 \00d\00i\00d\00 \00n\00o\00t\00 \00w\00i\00n\00 \00t\00h\00i\00s\00 \00m\00a\00r\00k\00e\00t")
+ (data $62 (i32.const 6556) "<")
+ (data $62.1 (i32.const 6568) "\02\00\00\00\1e\00\00\00N\00o\00 \00w\00i\00n\00n\00i\00n\00g\00 \00p\00o\00o\00l")
+ (data $63 (i32.const 6620) "<")
+ (data $63.1 (i32.const 6632) "\02\00\00\00 \00\00\00R\00e\00w\00a\00r\00d\00 \00c\00l\00a\00i\00m\00e\00d\00:\00 ")
+ (data $64 (i32.const 6684) ",")
+ (data $64.1 (i32.const 6696) "\02\00\00\00\14\00\00\00 \00r\00e\00c\00e\00i\00v\00e\00d\00 ")
+ (data $65 (i32.const 6732) ",")
+ (data $65.1 (i32.const 6744) "\02\00\00\00\1a\00\00\00 \00f\00r\00o\00m\00 \00m\00a\00r\00k\00e\00t\00 ")
+ (data $66 (i32.const 6780) ",\00\00\00\03\00\00\00\00\00\00\00\14\00\00\00\18\00\00\00\f0\19\00\00\00\00\00\000\1a\00\00\00\00\00\00`\1a")
+ (data $67 (i32.const 6828) ",")
+ (data $67.1 (i32.const 6840) "\02\00\00\00\1a\00\00\00B\00e\00t\00 \00n\00o\00t\00 \00f\00o\00u\00n\00d")
  (table $0 2 2 funcref)
  (elem $0 (i32.const 1) $~lib/@massalabs/massa-as-sdk/assembly/std/utils/address/json2Address~anonymous|0)
  (export "createMarket" (func $assembly/main/createMarket))
@@ -915,7 +917,7 @@
   (local $4 i32)
   (local $5 i32)
   (local $6 i32)
-  block $__inlined_func$~lib/@massalabs/as-types/assembly/argument/Args#nextU32$465
+  block $__inlined_func$~lib/@massalabs/as-types/assembly/argument/Args#nextU32$471
    local.get $0
    local.tee $1
    i32.load offset=4
@@ -937,7 +939,7 @@
     local.get $0
     i32.const 1792
     i32.store offset=4
-    br $__inlined_func$~lib/@massalabs/as-types/assembly/argument/Args#nextU32$465
+    br $__inlined_func$~lib/@massalabs/as-types/assembly/argument/Args#nextU32$471
    end
    local.get $1
    i32.const 4
@@ -2865,6 +2867,416 @@
   i32.store offset=4
   local.get $1
  )
+ (func $~lib/util/number/utoa32 (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  local.get $0
+  i32.eqz
+  if
+   i32.const 2992
+   return
+  end
+  local.get $0
+  i32.const 100000
+  i32.lt_u
+  if (result i32)
+   local.get $0
+   i32.const 100
+   i32.lt_u
+   if (result i32)
+    local.get $0
+    i32.const 10
+    i32.ge_u
+    i32.const 1
+    i32.add
+   else
+    local.get $0
+    i32.const 10000
+    i32.ge_u
+    i32.const 3
+    i32.add
+    local.get $0
+    i32.const 1000
+    i32.ge_u
+    i32.add
+   end
+  else
+   local.get $0
+   i32.const 10000000
+   i32.lt_u
+   if (result i32)
+    local.get $0
+    i32.const 1000000
+    i32.ge_u
+    i32.const 6
+    i32.add
+   else
+    local.get $0
+    i32.const 1000000000
+    i32.ge_u
+    i32.const 8
+    i32.add
+    local.get $0
+    i32.const 100000000
+    i32.ge_u
+    i32.add
+   end
+  end
+  local.tee $2
+  i32.const 1
+  i32.shl
+  i32.const 2
+  call $~lib/rt/stub/__new
+  local.tee $1
+  local.get $0
+  local.get $2
+  call $~lib/util/number/utoa32_dec_lut
+  local.get $1
+ )
+ (func $~lib/staticarray/StaticArray<~lib/string/String>#join (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  i32.const 2176
+  local.set $3
+  block $__inlined_func$~lib/util/string/joinStringArray$163
+   local.get $0
+   i32.const 20
+   i32.sub
+   i32.load offset=16
+   i32.const 2
+   i32.shr_u
+   local.tee $7
+   i32.const 1
+   i32.sub
+   local.tee $5
+   i32.const 0
+   i32.lt_s
+   br_if $__inlined_func$~lib/util/string/joinStringArray$163
+   local.get $5
+   i32.eqz
+   if
+    local.get $0
+    i32.load
+    local.tee $3
+    i32.eqz
+    if
+     i32.const 2176
+     local.set $3
+    end
+    br $__inlined_func$~lib/util/string/joinStringArray$163
+   end
+   loop $for-loop|0
+    local.get $4
+    local.get $7
+    i32.lt_s
+    if
+     local.get $0
+     local.get $4
+     i32.const 2
+     i32.shl
+     i32.add
+     i32.load
+     local.tee $3
+     if
+      local.get $1
+      local.get $3
+      i32.const 20
+      i32.sub
+      i32.load offset=16
+      i32.const 1
+      i32.shr_u
+      i32.add
+      local.set $1
+     end
+     local.get $4
+     i32.const 1
+     i32.add
+     local.set $4
+     br $for-loop|0
+    end
+   end
+   local.get $1
+   local.get $5
+   i32.const 2172
+   i32.load
+   i32.const 1
+   i32.shr_u
+   local.tee $1
+   i32.mul
+   i32.add
+   i32.const 1
+   i32.shl
+   i32.const 2
+   call $~lib/rt/stub/__new
+   local.set $3
+   loop $for-loop|1
+    local.get $5
+    local.get $6
+    i32.gt_s
+    if
+     local.get $0
+     local.get $6
+     i32.const 2
+     i32.shl
+     i32.add
+     i32.load
+     local.tee $4
+     if
+      local.get $3
+      local.get $2
+      i32.const 1
+      i32.shl
+      i32.add
+      local.get $4
+      local.get $4
+      i32.const 20
+      i32.sub
+      i32.load offset=16
+      i32.const 1
+      i32.shr_u
+      local.tee $4
+      i32.const 1
+      i32.shl
+      memory.copy
+      local.get $2
+      local.get $4
+      i32.add
+      local.set $2
+     end
+     local.get $1
+     if
+      local.get $3
+      local.get $2
+      i32.const 1
+      i32.shl
+      i32.add
+      i32.const 2176
+      local.get $1
+      i32.const 1
+      i32.shl
+      memory.copy
+      local.get $1
+      local.get $2
+      i32.add
+      local.set $2
+     end
+     local.get $6
+     i32.const 1
+     i32.add
+     local.set $6
+     br $for-loop|1
+    end
+   end
+   local.get $0
+   local.get $5
+   i32.const 2
+   i32.shl
+   i32.add
+   i32.load
+   local.tee $0
+   if
+    local.get $3
+    local.get $2
+    i32.const 1
+    i32.shl
+    i32.add
+    local.get $0
+    local.get $0
+    i32.const 20
+    i32.sub
+    i32.load offset=16
+    i32.const -2
+    i32.and
+    memory.copy
+   end
+  end
+  local.get $3
+ )
+ (func $assembly/main/placeBet (param $0 i32)
+  (local $1 i64)
+  (local $2 i64)
+  (local $3 i64)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  block $folding-inner1
+   block $folding-inner0
+    local.get $0
+    call $~lib/@massalabs/as-types/assembly/argument/Args#constructor
+    local.tee $0
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
+    local.tee $4
+    i32.load offset=8
+    local.tee $5
+    if (result i32)
+     local.get $5
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $4
+     i32.load offset=8
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $4
+    i64.load
+    local.set $1
+    local.get $0
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextU8
+    local.tee $4
+    i32.load offset=4
+    local.tee $5
+    if (result i32)
+     local.get $5
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $4
+     i32.load offset=4
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $4
+    i32.load8_u
+    local.set $6
+    local.get $0
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
+    local.tee $0
+    i32.load offset=8
+    local.tee $4
+    if (result i32)
+     local.get $4
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $0
+     i32.load offset=8
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $0
+    i64.load
+    local.set $2
+    call $~lib/@massalabs/massa-as-sdk/assembly/std/context/caller
+    i32.load
+    local.set $0
+    call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.callCoins
+    local.set $3
+    local.get $1
+    call $~lib/util/number/utoa64
+    local.set $4
+    local.get $6
+    call $~lib/util/number/utoa32
+    local.set $5
+    local.get $2
+    call $~lib/util/number/utoa64
+    local.set $7
+    local.get $3
+    call $~lib/util/number/utoa64
+    local.set $8
+    i32.const 5108
+    local.get $0
+    i32.store
+    i32.const 5116
+    local.get $4
+    i32.store
+    i32.const 5124
+    local.get $5
+    i32.store
+    i32.const 5132
+    local.get $7
+    i32.store
+    i32.const 5140
+    local.get $8
+    i32.store
+    i32.const 5104
+    call $~lib/staticarray/StaticArray<~lib/string/String>#join
+    call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.generateEvent
+    local.get $6
+    if (result i32)
+     local.get $6
+     i32.const 1
+     i32.eq
+     if (result i32)
+      i32.const 5200
+     else
+      i32.const 5232
+      local.get $6
+      call $~lib/util/number/utoa32
+      call $~lib/string/String#concat
+     end
+    else
+     i32.const 5168
+    end
+    local.set $4
+    local.get $2
+    call $~lib/util/number/utoa64
+    local.set $5
+    local.get $1
+    call $~lib/util/number/utoa64
+    local.set $6
+    i32.const 5444
+    local.get $0
+    i32.store
+    i32.const 5452
+    local.get $5
+    i32.store
+    i32.const 5460
+    local.get $4
+    i32.store
+    i32.const 5468
+    local.get $6
+    i32.store
+    i32.const 5440
+    call $~lib/staticarray/StaticArray<~lib/string/String>#join
+    call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.generateEvent
+    return
+   end
+   i32.const 1936
+   i32.const 2064
+   i32.const 70
+   i32.const 21
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  i32.const 2064
+  i32.const 70
+  i32.const 7
+  call $~lib/builtins/abort
+  unreachable
+ )
  (func $assembly/main/Market.deserialize (param $0 i32) (result i32)
   (local $1 i64)
   (local $2 i32)
@@ -3092,7 +3504,7 @@
     local.get $0
     i64.load
     i64.store offset=48
-    block $__inlined_func$~lib/@massalabs/as-types/assembly/argument/Args#nextI32$467
+    block $__inlined_func$~lib/@massalabs/as-types/assembly/argument/Args#nextI32$473
      local.get $2
      i32.load offset=4
      i32.const 20
@@ -3105,15 +3517,15 @@
      i32.lt_s
      if
       i32.const 8
-      i32.const 20
+      i32.const 21
       call $~lib/rt/stub/__new
       local.tee $0
       i32.const 0
       i32.store
       local.get $0
-      i32.const 4928
+      i32.const 5504
       i32.store offset=4
-      br $__inlined_func$~lib/@massalabs/as-types/assembly/argument/Args#nextI32$467
+      br $__inlined_func$~lib/@massalabs/as-types/assembly/argument/Args#nextI32$473
      end
      local.get $2
      i32.const 4
@@ -3121,7 +3533,7 @@
      i32.load
      local.set $4
      i32.const 8
-     i32.const 20
+     i32.const 21
      call $~lib/rt/stub/__new
      local.tee $0
      local.get $4
@@ -3247,882 +3659,6 @@
   call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.get
   call $assembly/main/Market.deserialize
  )
- (func $assembly/main/getUserBetKey (param $0 i64) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  global.get $assembly/main/USER_BET_PREFIX
-  i32.const 8
-  call $~lib/staticarray/StaticArray<u8>#constructor
-  local.tee $3
-  local.get $0
-  i64.store
-  local.get $3
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
-  i32.const 5264
-  call $~lib/@massalabs/as-types/assembly/serialization/strings/stringToBytes
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
-  local.get $1
-  call $~lib/@massalabs/as-types/assembly/serialization/strings/stringToBytes
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
-  i32.const 5264
-  call $~lib/@massalabs/as-types/assembly/serialization/strings/stringToBytes
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
-  i32.const 8
-  call $~lib/staticarray/StaticArray<u8>#constructor
-  local.tee $1
-  local.get $2
-  i32.const 255
-  i32.and
-  i64.extend_i32_u
-  i64.store
-  local.get $1
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
- )
- (func $assembly/main/Bet#constructor (param $0 i64) (param $1 i32) (param $2 i32) (param $3 i64) (result i32)
-  (local $4 i32)
-  i32.const 33
-  i32.const 21
-  call $~lib/rt/stub/__new
-  local.tee $4
-  i64.const 0
-  i64.store
-  local.get $4
-  i32.const 0
-  i32.store offset=8
-  local.get $4
-  i32.const 0
-  i32.store offset=12
-  local.get $4
-  i64.const 0
-  i64.store offset=16
-  local.get $4
-  i64.const 0
-  i64.store offset=24
-  local.get $4
-  i32.const 0
-  i32.store8 offset=32
-  local.get $4
-  local.get $0
-  i64.store
-  local.get $4
-  local.get $1
-  i32.store offset=8
-  local.get $4
-  local.get $2
-  i32.store offset=12
-  local.get $4
-  local.get $3
-  i64.store offset=16
-  local.get $4
-  call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.time
-  i64.store offset=24
-  local.get $4
-  i32.const 0
-  i32.store8 offset=32
-  local.get $4
- )
- (func $assembly/main/getUserBet (param $0 i64) (param $1 i32) (param $2 i32) (result i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  local.get $0
-  local.get $1
-  local.get $2
-  call $assembly/main/getUserBetKey
-  local.tee $1
-  call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.has
-  i32.eqz
-  if
-   i32.const 0
-   return
-  end
-  block $folding-inner1
-   block $__inlined_func$assembly/main/Bet.deserialize$19
-    block $folding-inner0
-     local.get $1
-     call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.get
-     call $~lib/@massalabs/as-types/assembly/argument/Args#constructor
-     local.tee $2
-     call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
-     local.tee $1
-     i32.load offset=8
-     local.tee $3
-     if (result i32)
-      local.get $3
-      i32.const 20
-      i32.sub
-      i32.load offset=16
-      i32.const 1
-      i32.shr_u
-     else
-      i32.const 0
-     end
-     if
-      local.get $1
-      i32.load offset=8
-      local.tee $1
-      i32.eqz
-      br_if $folding-inner0
-      br $folding-inner1
-     end
-     local.get $1
-     i64.load
-     local.set $0
-     local.get $2
-     call $~lib/@massalabs/as-types/assembly/argument/Args#nextString
-     local.tee $1
-     i32.load offset=4
-     local.tee $3
-     if (result i32)
-      local.get $3
-      i32.const 20
-      i32.sub
-      i32.load offset=16
-      i32.const 1
-      i32.shr_u
-     else
-      i32.const 0
-     end
-     if
-      local.get $1
-      i32.load offset=4
-      local.tee $1
-      i32.eqz
-      br_if $folding-inner0
-      br $folding-inner1
-     end
-     local.get $1
-     i32.load
-     local.set $3
-     local.get $2
-     call $~lib/@massalabs/as-types/assembly/argument/Args#nextU8
-     local.tee $1
-     i32.load offset=4
-     local.tee $4
-     if (result i32)
-      local.get $4
-      i32.const 20
-      i32.sub
-      i32.load offset=16
-      i32.const 1
-      i32.shr_u
-     else
-      i32.const 0
-     end
-     if
-      local.get $1
-      i32.load offset=4
-      local.tee $1
-      i32.eqz
-      br_if $folding-inner0
-      br $folding-inner1
-     end
-     local.get $1
-     i32.load8_u
-     local.set $4
-     local.get $2
-     call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
-     local.tee $5
-     i32.load offset=8
-     local.tee $1
-     if (result i32)
-      local.get $1
-      i32.const 20
-      i32.sub
-      i32.load offset=16
-      i32.const 1
-      i32.shr_u
-     else
-      i32.const 0
-     end
-     if
-      local.get $5
-      i32.load offset=8
-      local.tee $1
-      i32.eqz
-      br_if $folding-inner0
-      br $folding-inner1
-     end
-     local.get $0
-     local.get $3
-     local.get $4
-     local.get $5
-     i64.load
-     call $assembly/main/Bet#constructor
-     local.set $1
-     local.get $2
-     call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
-     local.tee $3
-     i32.load offset=8
-     local.tee $4
-     if (result i32)
-      local.get $4
-      i32.const 20
-      i32.sub
-      i32.load offset=16
-      i32.const 1
-      i32.shr_u
-     else
-      i32.const 0
-     end
-     if
-      local.get $3
-      i32.load offset=8
-      local.tee $1
-      i32.eqz
-      br_if $folding-inner0
-      br $folding-inner1
-     end
-     local.get $1
-     local.get $3
-     i64.load
-     i64.store offset=24
-     local.get $2
-     call $~lib/@massalabs/as-types/assembly/argument/Args#nextU8
-     local.tee $2
-     i32.load offset=4
-     local.tee $3
-     if (result i32)
-      local.get $3
-      i32.const 20
-      i32.sub
-      i32.load offset=16
-      i32.const 1
-      i32.shr_u
-     else
-      i32.const 0
-     end
-     if
-      local.get $2
-      i32.load offset=4
-      local.tee $1
-      i32.eqz
-      br_if $folding-inner0
-      br $folding-inner1
-     end
-     local.get $1
-     local.get $2
-     i32.load8_u
-     i32.const 0
-     i32.ne
-     i32.store8 offset=32
-     br $__inlined_func$assembly/main/Bet.deserialize$19
-    end
-    i32.const 1936
-    i32.const 2064
-    i32.const 70
-    i32.const 21
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $1
-   return
-  end
-  local.get $1
-  i32.const 2064
-  i32.const 70
-  i32.const 7
-  call $~lib/builtins/abort
-  unreachable
- )
- (func $assembly/main/Bet#serialize (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i64)
-  (local $3 i32)
-  (local $4 i32)
-  i32.const 0
-  global.set $~argumentsLength
-  call $~lib/@massalabs/as-types/assembly/argument/Args#constructor@varargs
-  local.set $1
-  local.get $0
-  i64.load
-  local.set $2
-  local.get $1
-  i32.load offset=4
-  local.set $3
-  i32.const 8
-  call $~lib/staticarray/StaticArray<u8>#constructor
-  local.tee $4
-  local.get $2
-  i64.store
-  local.get $1
-  local.get $3
-  local.get $4
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
-  i32.store offset=4
-  local.get $1
-  local.get $0
-  i32.load offset=8
-  call $"~lib/@massalabs/as-types/assembly/argument/Args#add<~lib/string/String,void>"
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  call $"~lib/@massalabs/as-types/assembly/argument/Args#add<u8,void>"
-  local.get $0
-  i64.load offset=16
-  local.set $2
-  local.get $1
-  i32.load offset=4
-  local.set $3
-  i32.const 8
-  call $~lib/staticarray/StaticArray<u8>#constructor
-  local.tee $4
-  local.get $2
-  i64.store
-  local.get $1
-  local.get $3
-  local.get $4
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
-  i32.store offset=4
-  local.get $0
-  i64.load offset=24
-  local.set $2
-  local.get $1
-  i32.load offset=4
-  local.set $3
-  i32.const 8
-  call $~lib/staticarray/StaticArray<u8>#constructor
-  local.tee $4
-  local.get $2
-  i64.store
-  local.get $1
-  local.get $3
-  local.get $4
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
-  i32.store offset=4
-  local.get $0
-  i32.load8_u offset=32
-  local.set $0
-  i32.const 1
-  call $~lib/staticarray/StaticArray<u8>#constructor
-  local.tee $3
-  local.get $0
-  i32.const 0
-  i32.ne
-  call $~lib/staticarray/StaticArray<u8>#__set
-  local.get $1
-  local.get $3
-  i32.const 20
-  i32.sub
-  i32.load offset=16
-  call $"~lib/@massalabs/as-types/assembly/argument/Args#add<u32,void>"
-  local.get $1
-  local.get $1
-  i32.load offset=4
-  local.get $3
-  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
-  i32.store offset=4
-  local.get $1
-  i32.load offset=4
- )
- (func $~lib/util/number/utoa32 (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  local.get $0
-  i32.eqz
-  if
-   i32.const 2992
-   return
-  end
-  local.get $0
-  i32.const 100000
-  i32.lt_u
-  if (result i32)
-   local.get $0
-   i32.const 100
-   i32.lt_u
-   if (result i32)
-    local.get $0
-    i32.const 10
-    i32.ge_u
-    i32.const 1
-    i32.add
-   else
-    local.get $0
-    i32.const 10000
-    i32.ge_u
-    i32.const 3
-    i32.add
-    local.get $0
-    i32.const 1000
-    i32.ge_u
-    i32.add
-   end
-  else
-   local.get $0
-   i32.const 10000000
-   i32.lt_u
-   if (result i32)
-    local.get $0
-    i32.const 1000000
-    i32.ge_u
-    i32.const 6
-    i32.add
-   else
-    local.get $0
-    i32.const 1000000000
-    i32.ge_u
-    i32.const 8
-    i32.add
-    local.get $0
-    i32.const 100000000
-    i32.ge_u
-    i32.add
-   end
-  end
-  local.tee $2
-  i32.const 1
-  i32.shl
-  i32.const 2
-  call $~lib/rt/stub/__new
-  local.tee $1
-  local.get $0
-  local.get $2
-  call $~lib/util/number/utoa32_dec_lut
-  local.get $1
- )
- (func $~lib/staticarray/StaticArray<~lib/string/String>#join (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  i32.const 2176
-  local.set $3
-  block $__inlined_func$~lib/util/string/joinStringArray$265
-   local.get $0
-   i32.const 20
-   i32.sub
-   i32.load offset=16
-   i32.const 2
-   i32.shr_u
-   local.tee $7
-   i32.const 1
-   i32.sub
-   local.tee $5
-   i32.const 0
-   i32.lt_s
-   br_if $__inlined_func$~lib/util/string/joinStringArray$265
-   local.get $5
-   i32.eqz
-   if
-    local.get $0
-    i32.load
-    local.tee $3
-    i32.eqz
-    if
-     i32.const 2176
-     local.set $3
-    end
-    br $__inlined_func$~lib/util/string/joinStringArray$265
-   end
-   loop $for-loop|0
-    local.get $4
-    local.get $7
-    i32.lt_s
-    if
-     local.get $0
-     local.get $4
-     i32.const 2
-     i32.shl
-     i32.add
-     i32.load
-     local.tee $3
-     if
-      local.get $1
-      local.get $3
-      i32.const 20
-      i32.sub
-      i32.load offset=16
-      i32.const 1
-      i32.shr_u
-      i32.add
-      local.set $1
-     end
-     local.get $4
-     i32.const 1
-     i32.add
-     local.set $4
-     br $for-loop|0
-    end
-   end
-   local.get $1
-   local.get $5
-   i32.const 2172
-   i32.load
-   i32.const 1
-   i32.shr_u
-   local.tee $1
-   i32.mul
-   i32.add
-   i32.const 1
-   i32.shl
-   i32.const 2
-   call $~lib/rt/stub/__new
-   local.set $3
-   loop $for-loop|1
-    local.get $5
-    local.get $6
-    i32.gt_s
-    if
-     local.get $0
-     local.get $6
-     i32.const 2
-     i32.shl
-     i32.add
-     i32.load
-     local.tee $4
-     if
-      local.get $3
-      local.get $2
-      i32.const 1
-      i32.shl
-      i32.add
-      local.get $4
-      local.get $4
-      i32.const 20
-      i32.sub
-      i32.load offset=16
-      i32.const 1
-      i32.shr_u
-      local.tee $4
-      i32.const 1
-      i32.shl
-      memory.copy
-      local.get $2
-      local.get $4
-      i32.add
-      local.set $2
-     end
-     local.get $1
-     if
-      local.get $3
-      local.get $2
-      i32.const 1
-      i32.shl
-      i32.add
-      i32.const 2176
-      local.get $1
-      i32.const 1
-      i32.shl
-      memory.copy
-      local.get $1
-      local.get $2
-      i32.add
-      local.set $2
-     end
-     local.get $6
-     i32.const 1
-     i32.add
-     local.set $6
-     br $for-loop|1
-    end
-   end
-   local.get $0
-   local.get $5
-   i32.const 2
-   i32.shl
-   i32.add
-   i32.load
-   local.tee $0
-   if
-    local.get $3
-    local.get $2
-    i32.const 1
-    i32.shl
-    i32.add
-    local.get $0
-    local.get $0
-    i32.const 20
-    i32.sub
-    i32.load offset=16
-    i32.const -2
-    i32.and
-    memory.copy
-   end
-  end
-  local.get $3
- )
- (func $assembly/main/placeBet (param $0 i32)
-  (local $1 i64)
-  (local $2 i64)
-  (local $3 i64)
-  (local $4 i32)
-  (local $5 i32)
-  (local $6 i32)
-  (local $7 i32)
-  block $folding-inner3
-   block $folding-inner2
-    block $folding-inner1
-     block $folding-inner0
-      local.get $0
-      call $~lib/@massalabs/as-types/assembly/argument/Args#constructor
-      local.tee $0
-      call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
-      local.tee $4
-      i32.load offset=8
-      local.tee $5
-      if (result i32)
-       local.get $5
-       i32.const 20
-       i32.sub
-       i32.load offset=16
-       i32.const 1
-       i32.shr_u
-      else
-       i32.const 0
-      end
-      if
-       local.get $4
-       i32.load offset=8
-       local.tee $0
-       i32.eqz
-       br_if $folding-inner0
-       br $folding-inner3
-      end
-      local.get $4
-      i64.load
-      local.set $1
-      local.get $0
-      call $~lib/@massalabs/as-types/assembly/argument/Args#nextU8
-      local.tee $0
-      i32.load offset=4
-      local.tee $4
-      if (result i32)
-       local.get $4
-       i32.const 20
-       i32.sub
-       i32.load offset=16
-       i32.const 1
-       i32.shr_u
-      else
-       i32.const 0
-      end
-      if
-       local.get $0
-       i32.load offset=4
-       local.tee $0
-       i32.eqz
-       br_if $folding-inner0
-       br $folding-inner3
-      end
-      local.get $0
-      i32.load8_u
-      local.set $0
-      call $~lib/@massalabs/massa-as-sdk/assembly/std/context/caller
-      i32.load
-      local.set $4
-      call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.callCoins
-      local.tee $2
-      i64.eqz
-      if
-       i32.const 4768
-       i32.const 4864
-       i32.const 297
-       i32.const 3
-       call $~lib/builtins/abort
-       unreachable
-      end
-      local.get $1
-      call $assembly/main/getMarket
-      local.tee $5
-      i32.eqz
-      if
-       i32.const 5072
-       i32.const 4864
-       i32.const 301
-       i32.const 3
-       call $~lib/builtins/abort
-       unreachable
-      end
-      local.get $5
-      i32.eqz
-      if
-       i32.const 1936
-       i32.const 4864
-       i32.const 302
-       i32.const 10
-       call $~lib/builtins/abort
-       unreachable
-      end
-      local.get $5
-      i32.load offset=32
-      if
-       i32.const 5136
-       i32.const 4864
-       i32.const 302
-       i32.const 3
-       call $~lib/builtins/abort
-       unreachable
-      end
-      call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.time
-      local.set $3
-      local.get $5
-      i32.eqz
-      if
-       i32.const 1936
-       i32.const 4864
-       i32.const 306
-       i32.const 24
-       call $~lib/builtins/abort
-       unreachable
-      end
-      local.get $3
-      local.get $5
-      i64.load offset=24
-      i64.ge_u
-      if
-       i32.const 5200
-       i32.const 4864
-       i32.const 306
-       i32.const 3
-       call $~lib/builtins/abort
-       unreachable
-      end
-      local.get $1
-      local.get $4
-      local.get $0
-      call $assembly/main/getUserBet
-      drop
-      local.get $0
-      if
-       local.get $0
-       i32.const 1
-       i32.eq
-       if
-        local.get $5
-        i32.eqz
-        local.tee $6
-        br_if $folding-inner1
-        local.get $6
-        br_if $folding-inner1
-        local.get $5
-        local.get $2
-        local.get $5
-        i64.load offset=48
-        i64.add
-        i64.store offset=48
-       end
-      else
-       local.get $5
-       i32.eqz
-       local.tee $6
-       br_if $folding-inner2
-       local.get $6
-       br_if $folding-inner2
-       local.get $5
-       local.get $2
-       local.get $5
-       i64.load offset=40
-       i64.add
-       i64.store offset=40
-      end
-      local.get $5
-      i32.eqz
-      if
-       i32.const 1936
-       i32.const 4864
-       i32.const 324
-       i32.const 14
-       call $~lib/builtins/abort
-       unreachable
-      end
-      local.get $5
-      call $assembly/main/saveMarket
-      local.get $1
-      local.get $4
-      local.get $0
-      i32.const 0
-      local.get $0
-      i32.const 2
-      i32.lt_u
-      select
-      local.get $2
-      call $assembly/main/Bet#constructor
-      local.tee $5
-      i64.load
-      local.get $5
-      i32.load offset=8
-      local.get $0
-      call $assembly/main/getUserBetKey
-      local.get $5
-      call $assembly/main/Bet#serialize
-      call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.set
-      local.get $0
-      if (result i32)
-       local.get $0
-       i32.const 1
-       i32.eq
-       if (result i32)
-        i32.const 5328
-       else
-        i32.const 5360
-        local.get $0
-        call $~lib/util/number/utoa32
-        call $~lib/string/String#concat
-       end
-      else
-       i32.const 5296
-      end
-      local.set $5
-      local.get $2
-      call $~lib/util/number/utoa64
-      local.set $6
-      local.get $0
-      call $~lib/util/number/utoa32
-      local.set $0
-      local.get $1
-      call $~lib/util/number/utoa64
-      local.set $7
-      i32.const 5620
-      local.get $4
-      i32.store
-      i32.const 5628
-      local.get $6
-      i32.store
-      i32.const 5636
-      local.get $5
-      i32.store
-      i32.const 5644
-      local.get $0
-      i32.store
-      i32.const 5652
-      local.get $7
-      i32.store
-      i32.const 5616
-      call $~lib/staticarray/StaticArray<~lib/string/String>#join
-      call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.generateEvent
-      return
-     end
-     i32.const 1936
-     i32.const 2064
-     i32.const 70
-     i32.const 21
-     call $~lib/builtins/abort
-     unreachable
-    end
-    i32.const 1936
-    i32.const 4864
-    i32.const 320
-    i32.const 5
-    call $~lib/builtins/abort
-    unreachable
-   end
-   i32.const 1936
-   i32.const 4864
-   i32.const 318
-   i32.const 5
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $0
-  i32.const 2064
-  i32.const 70
-  i32.const 7
-  call $~lib/builtins/abort
-  unreachable
- )
  (func $assembly/main/resolveMarket (param $0 i32)
   (local $1 i64)
   (local $2 i64)
@@ -4221,20 +3757,20 @@
     local.tee $0
     i32.eqz
     if
-     i32.const 5072
-     i32.const 4864
-     i32.const 355
+     i32.const 5648
+     i32.const 5712
+     i32.const 331
      i32.const 3
      call $~lib/builtins/abort
      unreachable
     end
-    block $__inlined_func$~lib/string/String.__eq$300 (result i32)
+    block $__inlined_func$~lib/string/String.__eq$255 (result i32)
      local.get $0
      i32.eqz
      if
       i32.const 1936
-      i32.const 4864
-      i32.const 356
+      i32.const 5712
+      i32.const 332
       i32.const 10
       call $~lib/builtins/abort
       unreachable
@@ -4245,7 +3781,7 @@
      local.tee $4
      local.get $6
      i32.eq
-     br_if $__inlined_func$~lib/string/String.__eq$300
+     br_if $__inlined_func$~lib/string/String.__eq$255
      drop
      i32.const 0
      local.get $6
@@ -4253,7 +3789,7 @@
      local.get $4
      i32.eqz
      i32.or
-     br_if $__inlined_func$~lib/string/String.__eq$300
+     br_if $__inlined_func$~lib/string/String.__eq$255
      drop
      i32.const 0
      local.get $4
@@ -4270,7 +3806,7 @@
      i32.const 1
      i32.shr_u
      i32.ne
-     br_if $__inlined_func$~lib/string/String.__eq$300
+     br_if $__inlined_func$~lib/string/String.__eq$255
      drop
      local.get $4
      i32.const 0
@@ -4281,9 +3817,9 @@
     end
     i32.eqz
     if
-     i32.const 5680
-     i32.const 4864
-     i32.const 356
+     i32.const 5776
+     i32.const 5712
+     i32.const 332
      i32.const 3
      call $~lib/builtins/abort
      unreachable
@@ -4292,8 +3828,8 @@
     i32.eqz
     if
      i32.const 1936
-     i32.const 4864
-     i32.const 357
+     i32.const 5712
+     i32.const 333
      i32.const 11
      call $~lib/builtins/abort
      unreachable
@@ -4303,9 +3839,9 @@
     i32.const 2
     i32.eq
     if
-     i32.const 5776
-     i32.const 4864
-     i32.const 357
+     i32.const 5872
+     i32.const 5712
+     i32.const 333
      i32.const 3
      call $~lib/builtins/abort
      unreachable
@@ -4316,8 +3852,8 @@
     i32.eqz
     if
      i32.const 1936
-     i32.const 4864
-     i32.const 361
+     i32.const 5712
+     i32.const 337
      i32.const 25
      call $~lib/builtins/abort
      unreachable
@@ -4327,9 +3863,9 @@
     i64.load offset=24
     i64.lt_u
     if
-     i32.const 5856
-     i32.const 4864
-     i32.const 361
+     i32.const 5952
+     i32.const 5712
+     i32.const 337
      i32.const 3
      call $~lib/builtins/abort
      unreachable
@@ -4338,8 +3874,8 @@
     i32.eqz
     if
      i32.const 1936
-     i32.const 4864
-     i32.const 364
+     i32.const 5712
+     i32.const 340
      i32.const 3
      call $~lib/builtins/abort
      unreachable
@@ -4351,8 +3887,8 @@
     i32.eqz
     if
      i32.const 1936
-     i32.const 4864
-     i32.const 365
+     i32.const 5712
+     i32.const 341
      i32.const 3
      call $~lib/builtins/abort
      unreachable
@@ -4364,8 +3900,8 @@
     i32.eqz
     if
      i32.const 1936
-     i32.const 4864
-     i32.const 366
+     i32.const 5712
+     i32.const 342
      i32.const 3
      call $~lib/builtins/abort
      unreachable
@@ -4377,8 +3913,8 @@
     i32.eqz
     if
      i32.const 1936
-     i32.const 4864
-     i32.const 367
+     i32.const 5712
+     i32.const 343
      i32.const 14
      call $~lib/builtins/abort
      unreachable
@@ -4391,19 +3927,19 @@
     local.get $2
     call $~lib/util/number/utoa64
     local.set $4
-    i32.const 6100
+    i32.const 6196
     local.get $0
     i32.store
-    i32.const 6108
-    i32.const 5328
-    i32.const 5296
+    i32.const 6204
+    i32.const 5200
+    i32.const 5168
     local.get $5
     select
     i32.store
-    i32.const 6116
+    i32.const 6212
     local.get $4
     i32.store
-    i32.const 6096
+    i32.const 6192
     call $~lib/staticarray/StaticArray<~lib/string/String>#join
     call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.generateEvent
     return
@@ -4421,6 +3957,365 @@
   i32.const 7
   call $~lib/builtins/abort
   unreachable
+ )
+ (func $assembly/main/getUserBetKey (param $0 i64) (param $1 i32) (result i32)
+  (local $2 i32)
+  global.get $assembly/main/USER_BET_PREFIX
+  i32.const 8
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $2
+  local.get $0
+  i64.store
+  local.get $2
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+  i32.const 6320
+  call $~lib/@massalabs/as-types/assembly/serialization/strings/stringToBytes
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+  local.get $1
+  call $~lib/@massalabs/as-types/assembly/serialization/strings/stringToBytes
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+  i32.const 6320
+  call $~lib/@massalabs/as-types/assembly/serialization/strings/stringToBytes
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+  i32.const 8
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $1
+  i64.const 0
+  i64.store
+  local.get $1
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+ )
+ (func $assembly/main/Bet.deserialize (param $0 i32) (result i32)
+  (local $1 i64)
+  (local $2 i64)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  block $folding-inner1
+   block $folding-inner0
+    local.get $0
+    call $~lib/@massalabs/as-types/assembly/argument/Args#constructor
+    local.tee $3
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
+    local.tee $0
+    i32.load offset=8
+    local.tee $4
+    if (result i32)
+     local.get $4
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $0
+     i32.load offset=8
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $0
+    i64.load
+    local.set $1
+    local.get $3
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextString
+    local.tee $0
+    i32.load offset=4
+    local.tee $4
+    if (result i32)
+     local.get $4
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $0
+     i32.load offset=4
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $0
+    i32.load
+    local.set $4
+    local.get $3
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextU8
+    local.tee $0
+    i32.load offset=4
+    local.tee $5
+    if (result i32)
+     local.get $5
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $0
+     i32.load offset=4
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $0
+    i32.load8_u
+    local.set $5
+    local.get $3
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
+    local.tee $6
+    i32.load offset=8
+    local.tee $0
+    if (result i32)
+     local.get $0
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $6
+     i32.load offset=8
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $6
+    i64.load
+    local.set $2
+    i32.const 33
+    i32.const 22
+    call $~lib/rt/stub/__new
+    local.tee $0
+    i64.const 0
+    i64.store
+    local.get $0
+    i32.const 0
+    i32.store offset=8
+    local.get $0
+    i32.const 0
+    i32.store offset=12
+    local.get $0
+    i64.const 0
+    i64.store offset=16
+    local.get $0
+    i64.const 0
+    i64.store offset=24
+    local.get $0
+    i32.const 0
+    i32.store8 offset=32
+    local.get $0
+    local.get $1
+    i64.store
+    local.get $0
+    local.get $4
+    i32.store offset=8
+    local.get $0
+    local.get $5
+    i32.store offset=12
+    local.get $0
+    local.get $2
+    i64.store offset=16
+    local.get $0
+    call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.time
+    i64.store offset=24
+    local.get $0
+    i32.const 0
+    i32.store8 offset=32
+    local.get $3
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextU64
+    local.tee $4
+    i32.load offset=8
+    local.tee $5
+    if (result i32)
+     local.get $5
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $4
+     i32.load offset=8
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $0
+    local.get $4
+    i64.load
+    i64.store offset=24
+    local.get $3
+    call $~lib/@massalabs/as-types/assembly/argument/Args#nextU8
+    local.tee $3
+    i32.load offset=4
+    local.tee $4
+    if (result i32)
+     local.get $4
+     i32.const 20
+     i32.sub
+     i32.load offset=16
+     i32.const 1
+     i32.shr_u
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     i32.load offset=4
+     local.tee $0
+     i32.eqz
+     br_if $folding-inner0
+     br $folding-inner1
+    end
+    local.get $0
+    local.get $3
+    i32.load8_u
+    i32.const 0
+    i32.ne
+    i32.store8 offset=32
+    local.get $0
+    return
+   end
+   i32.const 1936
+   i32.const 2064
+   i32.const 70
+   i32.const 21
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  i32.const 2064
+  i32.const 70
+  i32.const 7
+  call $~lib/builtins/abort
+  unreachable
+ )
+ (func $assembly/main/getUserBet (param $0 i64) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  call $assembly/main/getUserBetKey
+  local.tee $1
+  call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.has
+  i32.eqz
+  if
+   i32.const 0
+   return
+  end
+  local.get $1
+  call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.get
+  call $assembly/main/Bet.deserialize
+ )
+ (func $assembly/main/Bet#serialize (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i64)
+  (local $3 i32)
+  (local $4 i32)
+  i32.const 0
+  global.set $~argumentsLength
+  call $~lib/@massalabs/as-types/assembly/argument/Args#constructor@varargs
+  local.set $1
+  local.get $0
+  i64.load
+  local.set $2
+  local.get $1
+  i32.load offset=4
+  local.set $3
+  i32.const 8
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $4
+  local.get $2
+  i64.store
+  local.get $1
+  local.get $3
+  local.get $4
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+  i32.store offset=4
+  local.get $1
+  local.get $0
+  i32.load offset=8
+  call $"~lib/@massalabs/as-types/assembly/argument/Args#add<~lib/string/String,void>"
+  local.get $1
+  local.get $0
+  i32.load offset=12
+  call $"~lib/@massalabs/as-types/assembly/argument/Args#add<u8,void>"
+  local.get $0
+  i64.load offset=16
+  local.set $2
+  local.get $1
+  i32.load offset=4
+  local.set $3
+  i32.const 8
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $4
+  local.get $2
+  i64.store
+  local.get $1
+  local.get $3
+  local.get $4
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+  i32.store offset=4
+  local.get $0
+  i64.load offset=24
+  local.set $2
+  local.get $1
+  i32.load offset=4
+  local.set $3
+  i32.const 8
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $4
+  local.get $2
+  i64.store
+  local.get $1
+  local.get $3
+  local.get $4
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+  i32.store offset=4
+  local.get $0
+  i32.load8_u offset=32
+  local.set $0
+  i32.const 1
+  call $~lib/staticarray/StaticArray<u8>#constructor
+  local.tee $3
+  local.get $0
+  i32.const 0
+  i32.ne
+  call $~lib/staticarray/StaticArray<u8>#__set
+  local.get $1
+  local.get $3
+  i32.const 20
+  i32.sub
+  i32.load offset=16
+  call $"~lib/@massalabs/as-types/assembly/argument/Args#add<u32,void>"
+  local.get $1
+  local.get $1
+  i32.load offset=4
+  local.get $3
+  call $~lib/staticarray/StaticArray<u8>#concat<~lib/staticarray/StaticArray<u8>>
+  i32.store offset=4
+  local.get $1
+  i32.load offset=4
  )
  (func $assembly/main/claimReward (param $0 i32)
   (local $1 i64)
@@ -4476,9 +4371,9 @@
   local.tee $4
   i32.eqz
   if
-   i32.const 5072
-   i32.const 4864
-   i32.const 387
+   i32.const 5648
+   i32.const 5712
+   i32.const 363
    i32.const 3
    call $~lib/builtins/abort
    unreachable
@@ -4487,8 +4382,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 388
+   i32.const 5712
+   i32.const 364
    i32.const 10
    call $~lib/builtins/abort
    unreachable
@@ -4498,23 +4393,22 @@
   i32.const 2
   i32.ne
   if
-   i32.const 6144
-   i32.const 4864
-   i32.const 388
+   i32.const 6240
+   i32.const 5712
+   i32.const 364
    i32.const 3
    call $~lib/builtins/abort
    unreachable
   end
   local.get $1
   local.get $3
-  i32.const 0
   call $assembly/main/getUserBet
   local.tee $0
   i32.eqz
   if
-   i32.const 6224
-   i32.const 4864
-   i32.const 392
+   i32.const 6352
+   i32.const 5712
+   i32.const 368
    i32.const 3
    call $~lib/builtins/abort
    unreachable
@@ -4523,8 +4417,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 393
+   i32.const 5712
+   i32.const 369
    i32.const 11
    call $~lib/builtins/abort
    unreachable
@@ -4532,9 +4426,9 @@
   local.get $0
   i32.load8_u offset=32
   if
-   i32.const 6304
-   i32.const 4864
-   i32.const 393
+   i32.const 6432
+   i32.const 5712
+   i32.const 369
    i32.const 3
    call $~lib/builtins/abort
    unreachable
@@ -4543,8 +4437,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 397
+   i32.const 5712
+   i32.const 373
    i32.const 5
    call $~lib/builtins/abort
    unreachable
@@ -4556,8 +4450,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 397
+   i32.const 5712
+   i32.const 373
    i32.const 27
    call $~lib/builtins/abort
    unreachable
@@ -4567,9 +4461,9 @@
   i32.load offset=56
   i32.ne
   if
-   i32.const 6368
-   i32.const 4864
-   i32.const 396
+   i32.const 6496
+   i32.const 5712
+   i32.const 372
    i32.const 3
    call $~lib/builtins/abort
    unreachable
@@ -4578,8 +4472,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 402
+   i32.const 5712
+   i32.const 378
    i32.const 21
    call $~lib/builtins/abort
    unreachable
@@ -4594,8 +4488,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 404
+   i32.const 5712
+   i32.const 380
    i32.const 5
    call $~lib/builtins/abort
    unreachable
@@ -4607,8 +4501,8 @@
    i32.eqz
    if
     i32.const 1936
-    i32.const 4864
-    i32.const 406
+    i32.const 5712
+    i32.const 382
     i32.const 9
     call $~lib/builtins/abort
     unreachable
@@ -4620,8 +4514,8 @@
    i32.eqz
    if
     i32.const 1936
-    i32.const 4864
-    i32.const 405
+    i32.const 5712
+    i32.const 381
     i32.const 9
     call $~lib/builtins/abort
     unreachable
@@ -4632,9 +4526,9 @@
   local.tee $2
   i64.eqz
   if
-   i32.const 6448
-   i32.const 4864
-   i32.const 408
+   i32.const 6576
+   i32.const 5712
+   i32.const 384
    i32.const 3
    call $~lib/builtins/abort
    unreachable
@@ -4643,8 +4537,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 411
+   i32.const 5712
+   i32.const 387
    i32.const 19
    call $~lib/builtins/abort
    unreachable
@@ -4660,8 +4554,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 414
+   i32.const 5712
+   i32.const 390
    i32.const 3
    call $~lib/builtins/abort
    unreachable
@@ -4673,8 +4567,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 415
+   i32.const 5712
+   i32.const 391
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -4683,7 +4577,6 @@
   i64.load
   local.get $0
   i32.load offset=8
-  i32.const 0
   call $assembly/main/getUserBetKey
   local.get $0
   call $assembly/main/Bet#serialize
@@ -4698,16 +4591,16 @@
   local.get $1
   call $~lib/util/number/utoa64
   local.set $4
-  i32.const 6676
+  i32.const 6804
   local.get $3
   i32.store
-  i32.const 6684
+  i32.const 6812
   local.get $0
   i32.store
-  i32.const 6692
+  i32.const 6820
   local.get $4
   i32.store
-  i32.const 6672
+  i32.const 6800
   call $~lib/staticarray/StaticArray<~lib/string/String>#join
   call $~lib/@massalabs/massa-as-sdk/assembly/env/env/env.generateEvent
  )
@@ -4755,9 +4648,9 @@
   local.tee $0
   i32.eqz
   if
-   i32.const 5072
-   i32.const 4864
-   i32.const 433
+   i32.const 5648
+   i32.const 5712
+   i32.const 409
    i32.const 3
    call $~lib/builtins/abort
    unreachable
@@ -4766,8 +4659,8 @@
   i32.eqz
   if
    i32.const 1936
-   i32.const 4864
-   i32.const 435
+   i32.const 5712
+   i32.const 411
    i32.const 10
    call $~lib/builtins/abort
    unreachable
@@ -4835,14 +4728,13 @@
     local.get $1
     local.get $0
     i32.load
-    i32.const 0
     call $assembly/main/getUserBet
     local.tee $0
     i32.eqz
     if
-     i32.const 6720
-     i32.const 4864
-     i32.const 447
+     i32.const 6848
+     i32.const 5712
+     i32.const 423
      i32.const 3
      call $~lib/builtins/abort
      unreachable
@@ -4851,8 +4743,8 @@
     i32.eqz
     if
      i32.const 1936
-     i32.const 4864
-     i32.const 449
+     i32.const 5712
+     i32.const 425
      i32.const 10
      call $~lib/builtins/abort
      unreachable
@@ -4908,7 +4800,7 @@
   local.get $0
  )
  (func $~start
-  i32.const 6748
+  i32.const 6876
   global.set $~lib/rt/stub/offset
   i32.const 0
   global.set $~argumentsLength
