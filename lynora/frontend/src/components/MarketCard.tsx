@@ -97,10 +97,10 @@ export default function MarketCard({ market }: MarketCardProps) {
       chaos={0.15}
       thickness={1.5}
       style={{ borderRadius: 12 }}
-      className="market-card-border"
+      className="market-card-border h-full"
     >
-      <div className="card transition-all hover:shadow-lg bg-gray-800 border-0">
-      <div className="flex items-start justify-between mb-4">
+      <div className="card transition-all hover:shadow-lg bg-gray-800 border-0 h-full flex flex-col">
+      <div className="flex items-start justify-between mb-4 flex-shrink-0">
         <div className="flex-1">
           <Link to={`/market/${market.id}`}>
             <h3 className="text-xl font-semibold text-white hover:text-primary-400 transition-colors line-clamp-2">
@@ -113,7 +113,7 @@ export default function MarketCard({ market }: MarketCardProps) {
         </div>
         
         <span className={clsx(
-          'badge ml-4 whitespace-nowrap',
+          'badge ml-4 whitespace-nowrap flex-shrink-0',
           isActive ? 'badge-success' : 
           market.status === 'Resolved' ? 'badge-info' : 'badge-warning'
         )}>
@@ -121,7 +121,7 @@ export default function MarketCard({ market }: MarketCardProps) {
         </span>
       </div>
 
-      <div className="mb-4">
+      <div className="flex-1 flex flex-col min-h-0">
         <div className="flex items-center justify-between text-sm text-gray-400 mb-3">
           <span className="font-medium">Total Pool</span>
           <span className="font-mono font-semibold text-white">{totalPool.toFixed(2)} MAS</span>
@@ -193,7 +193,7 @@ export default function MarketCard({ market }: MarketCardProps) {
         )}
       </div>
 
-      <div className="mt-4 pt-4 border-t border-gray-700 flex items-center justify-between text-sm text-gray-400">
+      <div className="mt-auto pt-4 border-t border-gray-700 flex items-center justify-between text-sm text-gray-400 flex-shrink-0">
         <span className="flex items-center gap-1">
           <span className={clsx(
             'w-2 h-2 rounded-full',
