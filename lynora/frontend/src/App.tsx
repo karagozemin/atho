@@ -10,8 +10,8 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen relative">
-        {/* DarkVeil Background - covers entire viewport */}
-        <div className="fixed inset-0 z-0" style={{ width: '100vw', height: '100vh' }}>
+        {/* DarkVeil Background - covers entire viewport and extends below */}
+        <div className="fixed inset-0 z-0" style={{ width: '100vw', height: '150vh' }}>
           <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             <DarkVeil 
               speed={0.3}

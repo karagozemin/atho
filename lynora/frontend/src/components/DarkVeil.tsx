@@ -118,13 +118,13 @@ export default function DarkVeil({
     const mesh = new Mesh(gl, { geometry, program });
 
     const resize = () => {
-      // Use viewport dimensions instead of parent dimensions
+      // Use viewport dimensions, extend height by 50% for better coverage
       const w = window.innerWidth;
-      const h = window.innerHeight;
+      const h = window.innerHeight * 1.5; // 150vh
       renderer.setSize(w * resolutionScale, h * resolutionScale);
       program.uniforms.uResolution.value.set(w, h);
       
-      // Ensure parent and canvas fill the viewport
+      // Ensure parent and canvas fill the extended viewport
       if (parent) {
         parent.style.width = `${w}px`;
         parent.style.height = `${h}px`;
