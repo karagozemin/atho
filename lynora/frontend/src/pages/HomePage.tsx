@@ -3,77 +3,112 @@ import MarketList from '../components/MarketList'
 import { getAllMarkets, Market } from '../lib/contract'
 
 // Mock markets (finished/resolved) for demo purposes
-// Values are in MAS (not nanoMAS) as strings for display
+// Values are in nanoMAS (string) for consistency with real markets
 const MOCK_MARKETS: Market[] = [
   {
     id: 1001,
     creator: 'AU12STCVmpQSBeFjDVPM9ErxJJFJtjMZtkTuGtfQzfa3LWN4h2XDJ',
-    question: 'Will Bitcoin reach $100,000 by end of 2024?',
-    description: 'This market will resolve based on Bitcoin\'s closing price on December 31, 2024. Data source: CoinGecko.',
+    question: 'Which cryptocurrency will have the highest market cap in 2025?',
+    description: 'Based on CoinMarketCap data on January 1, 2025.',
     endTime: Date.now() - (1 * 24 * 60 * 60 * 1000), // Ended 1 day ago
     status: 'Resolved',
-    totalUpBets: '1250.50', // MAS
-    totalDownBets: '850.25', // MAS
+    options: ['Bitcoin', 'Ethereum', 'Solana', 'Cardano'],
+    correctAnswer: 'Bitcoin',
+    bets: {
+      'Bitcoin': String(1250.50 * 1e9), // 1250.50 MAS in nanoMAS
+      'Ethereum': String(850.25 * 1e9),
+      'Solana': String(420.75 * 1e9),
+      'Cardano': String(180.50 * 1e9),
+    },
+    totalPool: String(2702.00 * 1e9), // Total in nanoMAS
     winningOption: 'Up',
-    createdAt: Date.now() - (15 * 24 * 60 * 60 * 1000), // Created 15 days ago
-    resolutionPrice: 102500,
-    totalPool: '2100.75', // MAS
+    createdAt: Date.now() - (15 * 24 * 60 * 60 * 1000),
+    resolutionPrice: 0,
+    maxReward: 10,
   },
   {
     id: 1002,
     creator: 'AU12STCVmpQSBeFjDVPM9ErxJJFJtjMZtkTuGtfQzfa3LWN4h2XDJ',
-    question: 'Will Ethereum surpass $5,000 by Q1 2025?',
-    description: 'Market resolves based on Ethereum\'s highest price reached in Q1 2025 (Jan-Mar). Data source: CoinMarketCap.',
-    endTime: Date.now() - (2 * 24 * 60 * 60 * 1000), // Ended 2 days ago
+    question: 'What will be the main AI trend in 2025?',
+    description: 'Based on industry reports and market analysis.',
+    endTime: Date.now() - (2 * 24 * 60 * 60 * 1000),
     status: 'Resolved',
-    totalUpBets: '680.00', // MAS
-    totalDownBets: '920.50', // MAS
-    winningOption: 'Down',
-    createdAt: Date.now() - (20 * 24 * 60 * 60 * 1000), // Created 20 days ago
-    resolutionPrice: 4200,
-    totalPool: '1600.50', // MAS
+    options: ['AGI Breakthrough', 'AI Regulation', 'Multimodal AI', 'AI Hardware'],
+    correctAnswer: 'AGI Breakthrough',
+    bets: {
+      'AGI Breakthrough': String(680.00 * 1e9),
+      'AI Regulation': String(920.50 * 1e9),
+      'Multimodal AI': String(350.25 * 1e9),
+      'AI Hardware': String(210.75 * 1e9),
+    },
+    totalPool: String(2161.50 * 1e9),
+    winningOption: 'Up',
+    createdAt: Date.now() - (20 * 24 * 60 * 60 * 1000),
+    resolutionPrice: 0,
+    maxReward: 10,
   },
   {
     id: 1003,
     creator: 'AU12STCVmpQSBeFjDVPM9ErxJJFJtjMZtkTuGtfQzfa3LWN4h2XDJ',
-    question: 'Will the S&P 500 close above 5,500 by year end?',
-    description: 'Resolution based on S&P 500 closing price on December 31, 2024. Data source: Yahoo Finance.',
-    endTime: Date.now() - (3 * 24 * 60 * 60 * 1000), // Ended 3 days ago
+    question: 'Which tech company will have the best stock performance in Q1 2025?',
+    description: 'Based on stock price performance from Jan 1 to Mar 31, 2025.',
+    endTime: Date.now() - (3 * 24 * 60 * 60 * 1000),
     status: 'Resolved',
-    totalUpBets: '1850.75', // MAS
-    totalDownBets: '650.25', // MAS
+    options: ['Apple', 'Microsoft', 'Nvidia', 'Google'],
+    correctAnswer: 'Nvidia',
+    bets: {
+      'Apple': String(450.25 * 1e9),
+      'Microsoft': String(680.50 * 1e9),
+      'Nvidia': String(1850.75 * 1e9),
+      'Google': String(520.00 * 1e9),
+    },
+    totalPool: String(2501.50 * 1e9),
     winningOption: 'Up',
-    createdAt: Date.now() - (18 * 24 * 60 * 60 * 1000), // Created 18 days ago
-    resolutionPrice: 5520,
-    totalPool: '2501.00', // MAS
+    createdAt: Date.now() - (18 * 24 * 60 * 60 * 1000),
+    resolutionPrice: 0,
+    maxReward: 10,
   },
   {
     id: 1004,
     creator: 'AU12STCVmpQSBeFjDVPM9ErxJJFJtjMZtkTuGtfQzfa3LWN4h2XDJ',
-    question: 'Will Tesla stock hit $300 before 2025?',
-    description: 'Market resolves if Tesla (TSLA) reaches $300 or higher at any point before January 1, 2025.',
-    endTime: Date.now() - (4 * 24 * 60 * 60 * 1000), // Ended 4 days ago
+    question: 'What will be the most popular programming language in 2025?',
+    description: 'Based on GitHub and Stack Overflow developer surveys.',
+    endTime: Date.now() - (4 * 24 * 60 * 60 * 1000),
     status: 'Resolved',
-    totalUpBets: '420.00', // MAS
-    totalDownBets: '580.50', // MAS
-    winningOption: 'Down',
-    createdAt: Date.now() - (22 * 24 * 60 * 60 * 1000), // Created 22 days ago
-    resolutionPrice: 285,
-    totalPool: '1000.50', // MAS
+    options: ['Python', 'JavaScript', 'Rust', 'TypeScript'],
+    correctAnswer: 'Python',
+    bets: {
+      'Python': String(420.00 * 1e9),
+      'JavaScript': String(580.50 * 1e9),
+      'Rust': String(180.25 * 1e9),
+      'TypeScript': String(320.75 * 1e9),
+    },
+    totalPool: String(1501.50 * 1e9),
+    winningOption: 'Up',
+    createdAt: Date.now() - (22 * 24 * 60 * 60 * 1000),
+    resolutionPrice: 0,
+    maxReward: 10,
   },
   {
     id: 1005,
     creator: 'AU12STCVmpQSBeFjDVPM9ErxJJFJtjMZtkTuGtfQzfa3LWN4h2XDJ',
-    question: 'Will Apple announce a new iPhone model in Q4 2024?',
-    description: 'Market resolves based on official Apple announcement of a new iPhone model in Q4 2024.',
-    endTime: Date.now() - (5 * 24 * 60 * 60 * 1000), // Ended 5 days ago
+    question: 'Which social media platform will gain the most users in 2025?',
+    description: 'Based on official user growth reports.',
+    endTime: Date.now() - (5 * 24 * 60 * 60 * 1000),
     status: 'Resolved',
-    totalUpBets: '2100.00', // MAS
-    totalDownBets: '350.25', // MAS
+    options: ['TikTok', 'Instagram', 'X (Twitter)', 'LinkedIn'],
+    correctAnswer: 'TikTok',
+    bets: {
+      'TikTok': String(2100.00 * 1e9),
+      'Instagram': String(350.25 * 1e9),
+      'X (Twitter)': String(180.50 * 1e9),
+      'LinkedIn': String(120.25 * 1e9),
+    },
+    totalPool: String(2751.00 * 1e9),
     winningOption: 'Up',
-    createdAt: Date.now() - (25 * 24 * 60 * 60 * 1000), // Created 25 days ago
-    resolutionPrice: 1, // Yes/No market
-    totalPool: '2450.25', // MAS
+    createdAt: Date.now() - (25 * 24 * 60 * 60 * 1000),
+    resolutionPrice: 0,
+    maxReward: 10,
   },
 ]
 

@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import MarketCard from './MarketCard'
-import BettingModal from './BettingModal'
 import { Market } from '../lib/contract'
 
 interface MarketListProps {
@@ -9,13 +7,6 @@ interface MarketListProps {
 }
 
 export default function MarketList({ markets, loading }: MarketListProps) {
-  const [selectedMarket, setSelectedMarket] = useState<number | null>(null)
-  const [betOption, setBetOption] = useState<'up' | 'down'>('up')
-
-  const handleBet = (marketId: number, option: 'up' | 'down') => {
-    setSelectedMarket(marketId)
-    setBetOption(option)
-  }
 
   if (loading) {
     return (
@@ -52,18 +43,9 @@ export default function MarketList({ markets, loading }: MarketListProps) {
           <MarketCard
             key={market.id}
             market={market}
-            onBet={handleBet}
           />
         ))}
       </div>
-
-      {selectedMarket && (
-        <BettingModal
-          marketId={selectedMarket}
-          option={betOption}
-          onClose={() => setSelectedMarket(null)}
-        />
-      )}
     </>
   )
 }
